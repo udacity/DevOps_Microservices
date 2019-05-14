@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-# This tags and uploads an image to Docker Hub
+# This file tags and uploads an image to Docker Hub
 
-#Assumes this is built
-# See `run_docker.sh`
+# Assumes that an image is built via `run_docker.sh`
 
 # Step 1:
-# Create your on docker ID here
-#dockerpath=""
+# Create dockerpath
+# dockerpath=<your docker ID/path>
 
 # Step 2:  
-# Authenticate & Tag
+# Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
-# Push Image
+# Push image to a docker repository
