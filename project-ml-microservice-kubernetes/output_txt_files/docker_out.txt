@@ -1,0 +1,1 @@
+<paste log output from Docker prediction, here>

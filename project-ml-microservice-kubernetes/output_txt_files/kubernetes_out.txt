@@ -1,0 +1,1 @@
+<paste log output from Kubernetes-mediated prediction, here>
