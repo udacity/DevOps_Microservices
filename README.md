@@ -2,7 +2,15 @@
 
 This repository contains material related to a Udacity course on scaling microservices with Kubernetes. In here, you'll find starting code for a project, in which you can containerize and deploy a machine learning srevice using Kubernetes.
 
-### Project
+## Tutorials
+
+### AWS Lambda
+
+* [Making Change]() TBD
+* [Wikipedia Query]()
+
+
+## Project
 
 * [Operationalize a Machine Learning Microservice API](https://github.com/udacity/DevOps_Microservices/tree/master/project-ml-microservice-kubernetes): Deploy a containerized, machine learning application using Kubernetes.
 
