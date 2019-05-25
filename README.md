@@ -53,7 +53,7 @@ Now most of the `.devops` libraries are available to you. There are a couple of 
 While you still have your `.devops` environment activated, you will still need to install:
 * Docker
 * Hadolint
-* Kubernetes (Minikube)
+* Kubernetes ([Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) if you want to run Kubernetes locally)
 
 ### Docker
 
