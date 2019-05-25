@@ -4,10 +4,10 @@ This repository contains material related to a Udacity course on scaling microse
 
 ## Tutorials
 
-### AWS Lambda
+### AWS Lambda & Serverless
 
-* [Making Change]() TBD
-* [Wikipedia Query]()
+* [Making Change](https://github.com/udacity/DevOps_Microservices/tree/master/lambda-functions): Create and deploy a serverless lambda function that responds to an input request; this example creates the correct amount of change to make up a value in US dollars.
+* [Wikipedia Query](): Create and deploy a lambda function that responds to an input request; this example returns the first sentence of a specific wikipedia page upon being queried.
 
 
 ## Project
