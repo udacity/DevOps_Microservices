@@ -15,10 +15,10 @@ def lambda_handler(event, context):
     
     # check that the request has some input body
     if 'body' in event:
-        body = json.loads(event["body"])
+        event = json.loads(event["body"])
 
     # get float "amount"
-    amount = float(body["amount"])
+    amount = float(event["amount"])
 
     # calculate the resultant change and store the result (res)
     res = []
