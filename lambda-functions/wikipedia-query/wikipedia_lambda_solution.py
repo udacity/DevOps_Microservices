@@ -16,8 +16,22 @@ def lambda_handler(event, context):
         body = json.loads(event["body"])
     
     # get the wikipedia "entity" from the body of the request
-    entity = body["entity"]
-    res = wikipedia.summary(entity, sentences=1) # first sentence, result
+    entity = event["entity"]
+    BAD_REQUEST_STATUS = 400
+    ALL_GOOD_STATUS = 200 
+    try:
+        res = wikipedia.summary(entity, sentences=1) # first sentence, result
+        statusCode = ALL_GOOD_STATUS
+    except wikipedia.exceptions.PageError:
+        res= "This word does not exist!"
+        statusCode = BAD_REQUEST_STATUS
+    except wikipedia.exceptions.DisambiguationError: 
+        statusCode = BAD_REQUEST_STATUS
+        res = "There are multiple references to this word!"
+    except:
+        statusCode = BAD_REQUEST_STATUS
+        res = "Sorry, Cannot Handle this request"
+        
 
     # print statements
     print(f"context: {context}, event: {event}")
@@ -25,7 +39,7 @@ def lambda_handler(event, context):
     
     # format the response as JSON and return the result
     response = {
-        "statusCode": "200", 
+        "statusCode": statusCode, 
         "headers": { "Content-type": "application/json" },
         "body": json.dumps({"message": res})
     }
