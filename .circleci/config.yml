@@ -40,4 +40,4 @@ key: v1-dependencies-{{ checksum "requirements.txt" }}
 name: run lint
 command: |
 . venv/bin/activate
-make lint 
+make lint
