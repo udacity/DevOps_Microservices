@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'python3.8
+
+  Sample SAM Template for wikipedia-sam
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  WikipediaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      Events:
+        Wikipedia:
+          Type: Api
+          Properties:
+            Path: ./app
+            Method: get
+      ImageUri: wikipediafunction:python3.8-v1
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./app
+      DockerTag: python3.8-v1
+Outputs:
+  WikipediaApi:
+    Description: API Gateway endpoint URL for Prod stage for Wikipedia function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/wikipedia/
+  WikipediaFunction:
+    Description: app World Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - WikipediaFunction
+      - Arn
+  WikipediaFunctionIamRole:
+    Description: Implicit IAM Role created for app World function
+    Value:
+      Fn::GetAtt:
+      - WikipediaFunctionRole
+      - Arn
