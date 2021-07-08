@@ -1,0 +1,26 @@
+NAME                            READY   STATUS              RESTARTS   AGE
+micro-ml-dps-78df5cb9c7-62lwr   0/1     ContainerCreating   0          0s
+micro-ml-dps-78df5cb9c7-shz2m   0/1     ContainerCreating   0          0s
+micro-ml-dps-78df5cb9c7-slgc2   0/1     ContainerCreating   0          0s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+Found 3 pods, using pod/micro-ml-dps-78df5cb9c7-shz2m
+ * Serving Flask app "app" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 278-013-256
+[2021-07-08 16:32:35,356] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2021-07-08 16:32:35,363] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-07-08 16:32:35,368] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-07-08 16:32:35,370] INFO in app: Predicted value: \[20.35373177134412]
+127.0.0.1 - - [08/Jul/2021 16:32:35] "POST /predict HTTP/1.1" 200 -
