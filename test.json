@@ -1,0 +1,430 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2021-07-08T15:44:54Z",
+                "generateName": "micro-ml-dps-78df5cb9c7-",
+                "labels": {
+                    "app": "micro-ml-dps",
+                    "pod-template-hash": "78df5cb9c7"
+                },
+                "name": "micro-ml-dps-78df5cb9c7-2sgcj",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "micro-ml-dps-78df5cb9c7",
+                        "uid": "f7094f2e-ccba-45b0-8f34-d4defa946048"
+                    }
+                ],
+                "resourceVersion": "50482",
+                "uid": "1845621f-03a3-4562-bcea-5a238509d8b3"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imagePullPolicy": "Always",
+                        "name": "prediction-engine",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-m849r",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-m849r",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-m849r"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:45:00Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:45:00Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://6d4325c06d74a47ac635ef36858a84348000a931ef360074aa224ba53a080b55",
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imageID": "docker-pullable://devopsxpro/prediction-engine@sha256:039e84d930c042e3b9485a6b6731795080d8e7ca34feb9e79ffdfe3c3699b354",
+                        "lastState": {},
+                        "name": "prediction-engine",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2021-07-08T15:44:59Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.49.2",
+                "phase": "Running",
+                "podIP": "172.17.0.7",
+                "podIPs": [
+                    {
+                        "ip": "172.17.0.7"
+                    }
+                ],
+                "qosClass": "BestEffort",
+                "startTime": "2021-07-08T15:44:54Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2021-07-08T15:44:54Z",
+                "generateName": "micro-ml-dps-78df5cb9c7-",
+                "labels": {
+                    "app": "micro-ml-dps",
+                    "pod-template-hash": "78df5cb9c7"
+                },
+                "name": "micro-ml-dps-78df5cb9c7-5f6ft",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "micro-ml-dps-78df5cb9c7",
+                        "uid": "f7094f2e-ccba-45b0-8f34-d4defa946048"
+                    }
+                ],
+                "resourceVersion": "50467",
+                "uid": "15e56683-d309-4de5-9675-bcd3574cfe55"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imagePullPolicy": "Always",
+                        "name": "prediction-engine",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-m849r",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-m849r",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-m849r"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:57Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:57Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://e1f1358a5a4496204d9ffe245844a8aafcda1260495760e955fd3216d5dc1b3b",
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imageID": "docker-pullable://devopsxpro/prediction-engine@sha256:039e84d930c042e3b9485a6b6731795080d8e7ca34feb9e79ffdfe3c3699b354",
+                        "lastState": {},
+                        "name": "prediction-engine",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2021-07-08T15:44:56Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.49.2",
+                "phase": "Running",
+                "podIP": "172.17.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.17.0.2"
+                    }
+                ],
+                "qosClass": "BestEffort",
+                "startTime": "2021-07-08T15:44:54Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2021-07-08T15:44:54Z",
+                "generateName": "micro-ml-dps-78df5cb9c7-",
+                "labels": {
+                    "app": "micro-ml-dps",
+                    "pod-template-hash": "78df5cb9c7"
+                },
+                "name": "micro-ml-dps-78df5cb9c7-zw8rz",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "micro-ml-dps-78df5cb9c7",
+                        "uid": "f7094f2e-ccba-45b0-8f34-d4defa946048"
+                    }
+                ],
+                "resourceVersion": "50474",
+                "uid": "ff74ce1a-3f8d-4444-af23-78ca35c872fa"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imagePullPolicy": "Always",
+                        "name": "prediction-engine",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-m849r",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-m849r",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-m849r"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:58Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:58Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2021-07-08T15:44:54Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://3e5e49fb976344db93b4215e1a4be12c2b7fd0dd0a2c630b861e5126da795b29",
+                        "image": "devopsxpro/prediction-engine:latest",
+                        "imageID": "docker-pullable://devopsxpro/prediction-engine@sha256:039e84d930c042e3b9485a6b6731795080d8e7ca34feb9e79ffdfe3c3699b354",
+                        "lastState": {},
+                        "name": "prediction-engine",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2021-07-08T15:44:58Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.49.2",
+                "phase": "Running",
+                "podIP": "172.17.0.3",
+                "podIPs": [
+                    {
+                        "ip": "172.17.0.3"
+                    }
+                ],
+                "qosClass": "BestEffort",
+                "startTime": "2021-07-08T15:44:54Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

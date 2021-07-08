@@ -2,4 +2,8 @@ Makefile
 README.md
 run_docker.sh 
 run_kubernetes.sh 
-upload_docker.sh 
+upload_docker.sh
+make_prediction.sh
+Dockerfile
+output_txt_files/
+.dockerignore
