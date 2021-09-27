@@ -1,0 +1,8 @@
+*.code-workspace
+.DS_Store
+.vscode/
+*.log
+*.tmp
+*.tmp.*
+log.txt
+plugins/
