@@ -150,4 +150,5 @@ That's about it! When working with kubernetes, you may need to install some othe
 4. Follow steps in README files for the project
 5. To build your lambda function locally type: `sam build`
     - If using a image container, this command will build a local container that you can test on local docker application.
-6. When you want to deploy your lambda function from your local machine to amazon, use the following command `sam deploy --guided`
+6. To test container on local machine `same local invoke`
+7. When you want to deploy your lambda function from your local machine to amazon, use the following command `sam deploy --guided`. However, if using an image container, create a repository within Elastic Container Repository (aka. ECR).  Here is where you can save your containers.
