@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "HelloWorld2"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-s43lhzt4ki9o"
+s3_prefix = "HelloWorld2"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=657022415820.dkr.ecr.us-east-1.amazonaws.com/udacity-exercises"]
+profile = "udacity_devops"
