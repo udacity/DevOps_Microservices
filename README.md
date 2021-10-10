@@ -144,7 +144,7 @@ That's about it! When working with kubernetes, you may need to install some othe
 
 ## Creating a Lambda function
 
-1. `sam init` Creates a new SAM template project
+1. `sam init` Creates a new SAM template project locally in your environment.  Make sure you are in the folder in which you like the lambda function to be built.
 2. Choose **AWS Quick Start Templates**
 3. Choose **ZIP** or Container (ECR)
 4. Follow steps in README files for the project
