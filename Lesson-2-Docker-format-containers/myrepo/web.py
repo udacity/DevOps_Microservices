@@ -10,6 +10,7 @@ app = Flask(__name__)
 def hello():
     return f"This is my library version {__version__}"
 
+
 @app.route("/fakedata")
 def fakedata():
     return json.dumps(fake_data())
