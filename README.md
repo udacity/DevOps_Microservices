@@ -165,6 +165,18 @@ A typical Python project can be improved by adding a Makefile with the following
 
 *setup*, *install*, *test*, *lint* are command grouping in the makefile. To run, for instance, just the setup commands you would: 1) cd into where the Makefile is located, and 2) type in your terminal `make setup`.  To run all commands you would type `make all`.
 
+### Makefile Creation Recap
+
+Let’s recap the key concepts of creating a Makefile.
+
+- setup: You have seen most of this line before, which is dealing with our Python 3 virtual environment.
+- install: This installs the requirements for our environment. In our case, it also install the pytest and pylint libraries used later on in the Makefile.
+- test: This is broken into two parts for testing.
+  - First, it will use .py files in the tests directory. The -vv flag ensures short test durations are still shown ([Documentation](https://docs.pytest.org/en/latest/usage.html#profiling-test-execution-duration)), while the -cov flag helps to calculate what the test coverage of the code is ([Documentation](https://pypi.org/project/pytest-cov/)) in a given directory.
+  - The second line is used to test Jupyter Notebook cells. The --nbval flag makes pytest pay attention to jupyter notebooks ([Documentation](https://nbval.readthedocs.io/en/latest/)).
+- lint: This will lint what is in the myrepolib directory, as well as the cli.py and web.py files in our current directory (see video). The --disable=R,C is used to disable the "convention" (C) and "refactor" (R) message classes (see related [Stack Overflow post](https://stackoverflow.com/questions/31907762/pylint-to-show-only-warnings-and-errors)).
+- all: You may notice this line looks a little different than the above lines, with the commands on the same line. This will execute our install, lint and test commands.
+
 ## Resources
 
 - [Install Pyenv](https://realpython.com/intro-to-pyenv/).  The purpose of **pyenv** is to manage multiple versions of python.  Different python packages (e.g., pandas, scikit-learn, plotly) require a certain version(s) of python to function correctly (assuming underlying structure and code).  Traditionally system packages (i.e. brew for MacOS, apt for Ubuntu Linux, yum for Debian linux) install packages for the whole system, for all users.  As developers, we need different version of python based on what project we are working on. So we need access packages store at the user level and for the situation needed.  Pyenv installs at the users level, and allows you to create virtual environments so you can use different version in different situations.
