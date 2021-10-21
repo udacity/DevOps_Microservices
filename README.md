@@ -142,6 +142,8 @@ Your code has been rated at 10.00/10
 
 That's about it! When working with kubernetes, you may need to install some other libraries, but these instructions will set you up with an environment that can build and deploy Docker containers.
 
+To test out hadolint locally, change to directory that has a Dockerfile, and type the following command: `hadolint Dockerfile`. Nothing will happen if there is no error.  If there is errors or warnings then hadolint will print that out.
+
 ## Creating a Lambda function
 
 1. `sam init` Creates a new SAM template project locally in your environment.  Make sure you are in the folder in which you like the lambda function to be built.
@@ -152,3 +154,18 @@ That's about it! When working with kubernetes, you may need to install some othe
     - If using a image container, this command will build a local container that you can test on local docker application.
 6. To test container on local machine `same local invoke`
 7. When you want to deploy your lambda function from your local machine to amazon, use the following command `sam deploy --guided`. However, if using an image container, create a repository within Elastic Container Repository (aka. ECR).  Here is where you can save your containers.
+
+## Makefiles
+
+A file that groups linux commands.  A main benefit to a Makefile is the ability to enforce a convention. If everytime you work a project you follow a few simple steps, it reduces the possibility of errors in building and testing a project. The general idea is that a convention eliminates the need to think about what to do. For every project, there is a common way to install software, a common way to test software and a common way to test and lint software.
+
+A typical Python project can be improved by adding a Makefile with the following steps: make setup, make install, make test, make lint and make all. You can run the entire make file or run sections of the make file. For example:
+
+![Makefile Image](./img/Makefile.png)
+
+*setup*, *install*, *test*, *lint* are command grouping in the makefile. To run, for instance, just the setup commands you would: 1) cd into where the Makefile is located, and 2) type in your terminal `make setup`.  To run all commands you would type `make all`.
+
+## Resources
+
+- [Install Pyenv](https://realpython.com/intro-to-pyenv/).  The purpose of **pyenv** is to manage multiple versions of python.  Different python packages (e.g., pandas, scikit-learn, plotly) require a certain version(s) of python to function correctly (assuming underlying structure and code).  Traditionally system packages (i.e. brew for MacOS, apt for Ubuntu Linux, yum for Debian linux) install packages for the whole system, for all users.  As developers, we need different version of python based on what project we are working on. So we need access packages store at the user level and for the situation needed.  Pyenv installs at the users level, and allows you to create virtual environments so you can use different version in different situations.
+- [PyPI](https://pypi.orgcl) Python packages that pip can download and install are on this package repository. It is a good place to review to understand the purposes of package, their licenses, and why people use them.
