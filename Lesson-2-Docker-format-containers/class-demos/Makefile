@@ -18,7 +18,7 @@ run-circleci-local:
 	circleci local execute
 
 lint:
-	hadolint demos/flask-sklearn/Dockerfile
-	pylint --disable=R,C,W1203 demos/**/**.py
+	hadolint demos/flask-sklearn/Dockerfile #linting docker file
+	pylint --disable=R,C,W1203 demos/**/**.py #linting application
 
 all: install lint test

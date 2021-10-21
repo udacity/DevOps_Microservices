@@ -177,6 +177,8 @@ Let’s recap the key concepts of creating a Makefile.
 - lint: This will lint what is in the myrepolib directory, as well as the cli.py and web.py files in our current directory (see video). The --disable=R,C is used to disable the "convention" (C) and "refactor" (R) message classes (see related [Stack Overflow post](https://stackoverflow.com/questions/31907762/pylint-to-show-only-warnings-and-errors)).
 - all: You may notice this line looks a little different than the above lines, with the commands on the same line. This will execute our install, lint and test commands.
 
+To declare a variable within make use `$@`. To prevent system from print out all the commands being executed add a `@` in front of the command that you do want to be printed out to the screen.
+
 ## Resources
 
 - [Install Pyenv](https://realpython.com/intro-to-pyenv/).  The purpose of **pyenv** is to manage multiple versions of python.  Different python packages (e.g., pandas, scikit-learn, plotly) require a certain version(s) of python to function correctly (assuming underlying structure and code).  Traditionally system packages (i.e. brew for MacOS, apt for Ubuntu Linux, yum for Debian linux) install packages for the whole system, for all users.  As developers, we need different version of python based on what project we are working on. So we need access packages store at the user level and for the situation needed.  Pyenv installs at the users level, and allows you to create virtual environments so you can use different version in different situations.
