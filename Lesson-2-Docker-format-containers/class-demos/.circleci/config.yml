@@ -24,6 +24,10 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            # you would want a virtual environment, because the standard
+            # installation of package on this image may have conflicting
+            # package.  By creating virtual environment, you insure only the
+            # python packages you want are on the docker image.
             python3 -m venv venv
             . venv/bin/activate
             make install
