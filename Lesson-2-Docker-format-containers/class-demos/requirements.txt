@@ -1,5 +1,6 @@
 Flask
 numpy
 pandas
+scipy
 scikit-learn
 pylint
