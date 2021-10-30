@@ -5,8 +5,8 @@
 
 setup:
 	# Create python virtualenv & source it
-	# source ~/.udacity-devops/bin/activate
 	python3 -m venv ~/.udacity-devops
+	source ~/.udacity-devops/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
