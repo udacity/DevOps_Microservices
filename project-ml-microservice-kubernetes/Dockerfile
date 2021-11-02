@@ -2,6 +2,7 @@ FROM python:3.7.3-stretch
 
 ## Step 1:
 # Create a working directory
+# Tells Docker to use this path as the default location for all subsequent commands
 WORKDIR /app
 
 ## Step 2:
@@ -21,3 +22,4 @@ EXPOSE 80
 ## Step 5:
 # Run app.py at container launch
 CMD ["python", "app.py"]
+#CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
