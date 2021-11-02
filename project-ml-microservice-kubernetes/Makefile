@@ -22,8 +22,9 @@ test:
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
-	# This is linter for Dockerfiles
-	hadolint Dockerfile
+	# This is linter for Dockerfiles.  I am ignoring rules DL3013 & DL3042
+	hadolint --ignore DL3013 --ignore DL3042 Dockerfile
+
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1309 app.py
