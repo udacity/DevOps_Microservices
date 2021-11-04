@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM python:3.7.3-stretch
 
 ## Step 1:
@@ -8,6 +10,10 @@ WORKDIR /app
 ## Step 2:
 # Copy source code to working directory
 COPY . app.py /app/
+
+## Step 2a:
+# See what files are in the container
+RUN ls -lha
 
 ## Step 3:
 # Install packages from requirements.txt
