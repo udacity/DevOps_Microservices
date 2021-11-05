@@ -6,7 +6,7 @@
 # Build image and add a descriptive tag
 # Docker images from a Dockerfile and a “context”. A build’s context is the set of files located in the specified PATH or URL. 
 # The Docker build process can access any of the files located in this context.
-docker build --tag=release_v1 .
+docker build --tag=housingapp_release_v1 .
 
 # Step 2: 
 # List docker images on your local machine.
@@ -23,7 +23,7 @@ docker images
 # docker run -p <container port>:<host machine port> <image tag or name>
 # The -d option say run in detach mode, which means run in the background.
 # docker run -d -p <container_port>:<host_port> --name <adding a name to the container> <image tag or name>
-docker run -p 8000:80 --name housingapp release_v1
+docker run -p 8000:80 --name housingapp housingapp_release_v1
 
 # Step 3a
 # See if the container is running
