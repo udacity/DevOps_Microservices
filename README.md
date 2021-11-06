@@ -153,3 +153,9 @@ You should have a virtual machine like VirtualBox and minikube installed, as per
 After minikube starts, a cluster should be running locally. You can check that you have one cluster running by typing `kubectl config view` where you should see at least one cluster with a certificate-authority and server.
 
 This is a short task, but it may take some time to configure Kubernetes, and so this deserves its own task number.
+
+## Status Badge
+
+[How to create Status Badge in CircleCI](https://circleci.com/docs/2.0/status-badges/)
+
+[![<ORG_NAME>](https://circleci.com/gh/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg)](<LINK>)
