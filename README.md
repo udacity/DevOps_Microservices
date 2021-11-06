@@ -140,7 +140,16 @@ That's about it! When working with kubernetes, you may need to install some othe
 ### Random Links
 
 * [Using Cache in CircleCI](https://www.youtube.com/watch?v=0-ePDGv1qLc)
+* [Docker Reference Commands](https://docs.docker.com/engine/reference/commandline/docker/)
 
 ## Random Info
 
 To set an environment variable in the terminal you can say: `export name=value`
+
+## Task 5: Configure Kubernetes to Run Locally
+
+You should have a virtual machine like VirtualBox and minikube installed, as per the project environmet instructions. To start a local cluster, type the terminal command: `minikube start`.
+
+After minikube starts, a cluster should be running locally. You can check that you have one cluster running by typing `kubectl config view` where you should see at least one cluster with a certificate-authority and server.
+
+This is a short task, but it may take some time to configure Kubernetes, and so this deserves its own task number.

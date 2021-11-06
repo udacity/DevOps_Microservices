@@ -1,0 +1,27 @@
+ujones@MacBook-Pro project-ml-microservice-kubernetes % kubectl logs house-predictions
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 646-274-357
+[2021-11-06 03:40:16,478] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+
+[2021-11-06 03:40:16,489] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+
+[2021-11-06 03:40:16,497] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-11-06 03:40:16,501] INFO in app: Scaled Payload: 
+[[0. 0. 0. 0. 0. 0.]]
+
+[2021-11-06 03:40:16,502] INFO in app: Prediction: [20.35373177134412]
+
+127.0.0.1 - - [06/Nov/2021 03:40:16] "POST /predict HTTP/1.1" 200 -
+ujones@MacBook-Pro project-ml-microservice-kubernetes % 
