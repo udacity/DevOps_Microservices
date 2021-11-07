@@ -14,8 +14,8 @@ COPY . app.py /uda4proj/
 # Install packages from requirements.txt
 
 
-RUN pip install --upgrade pip  &&\
-        pip install --no-cache-dir -r  requirements.txt
+RUN pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 
 
