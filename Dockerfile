@@ -14,7 +14,7 @@ COPY . app.py /uda4proj/
 # Install packages from requirements.txt
 
 
-RUN pip install --upgrade pip3 &&\
+RUN pip install pip3 &&\
 		pip install -r requirements.txt
 
 
