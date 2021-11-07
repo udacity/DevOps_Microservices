@@ -14,7 +14,7 @@ COPY . app.py /uda4proj/
 # Install packages from requirements.txt
 
 
-RUN pip install pip3 &&\
+RUN pip install package==3.0.0 --disable-pip-version-check
 		pip install -r requirements.txt
 
 
