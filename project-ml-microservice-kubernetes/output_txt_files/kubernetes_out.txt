@@ -1,1 +1,7 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) yogob@MacBook-Pro project-ml-microservice-kubernetes % ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "api-pod" already exists
+NAME      READY   STATUS    RESTARTS   AGE
+api-pod   1/1     Running   0          9m45s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
