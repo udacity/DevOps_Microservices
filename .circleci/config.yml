@@ -8,7 +8,7 @@ jobs:
     docker:
 # Use the same Docker base as the project
       - image: python:3.7.3-stretch
-    working_directory: ~/repo
+    working_directory: ~/DevOps_Microservices
 
     steps:
       - checkout
