@@ -5,11 +5,18 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=ramujai06/udacity-operationalize
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login -u ramujai06
+docker tag operationalize $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+echo "Docker ID and Image push"
+docker push $dockerpath
+
+
+
