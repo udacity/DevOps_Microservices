@@ -17,5 +17,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward pods/ooperationalize 8000:80
+kubectl port-forward pods/operationalize 8000:80
 
