@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=ml-microservice .
+docker build --tag=richbm10/my-private-repo:ml-microservice .
 
 # Step 2: 
 # List docker images
