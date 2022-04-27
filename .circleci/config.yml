@@ -11,13 +11,12 @@ jobs:
     docker:
       - image: python:3.7.3-stretch
     
-    working_directory: ./project-ml-microservice-kubernetes
-    
     steps:
       - checkout
       
       - run:
           name: Display Requirements
+          working_directory: ./project-ml-microservice-kubernetes
           command: |
             cat ./requirements.txt
       
