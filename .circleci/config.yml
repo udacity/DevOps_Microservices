@@ -14,14 +14,9 @@ jobs:
     steps:
       - checkout
       
-      - run:
-          name: Display Requirements
-          working_directory: ./project-ml-microservice-kubernetes
-          command: |
-            cat ./requirements.txt
-      
       # Download and cache dependencies
       - restore_cache:
+          working_directory: ./project-ml-microservice-kubernetes
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
             # fallback to using the latest cache if no exact match is found
@@ -29,6 +24,7 @@ jobs:
             
       - run:
           name: install dependencies
+          working_directory: ./project-ml-microservice-kubernetes
           command: |
             python3 -m venv venv
             . venv/bin/activate
@@ -38,6 +34,7 @@ jobs:
             chmod +x /bin/hadolint
       
       - save_cache:
+          working_directory: ./project-ml-microservice-kubernetes
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
@@ -45,6 +42,7 @@ jobs:
       # run lint!
       - run:
           name: run lint
+          working_directory: ./project-ml-microservice-kubernetes
           command: |
             . venv/bin/activate
             make lint
