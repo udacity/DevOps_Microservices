@@ -121,4 +121,4 @@ Your code has been rated at 10.00/10
 That's about it! When working with kubernetes, you may need to install some other libraries, but these instructions will set you up with an environment that can build and deploy Docker containers.
 
 # Template:
-[![richbm10](https://circleci.com/gh/richbm10/DevOps_Microservices.svg?style=svg)](https://app.circleci.com/pipelines/github/richbm10/DevOps_Microservices?filter=all)
+[![CircleCI](https://circleci.com/gh/richbm10/DevOps_Microservices/tree/master.svg?style=svg)](https://circleci.com/gh/richbm10/DevOps_Microservices/tree/master)
