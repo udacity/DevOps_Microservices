@@ -17,8 +17,9 @@ jobs:
       - checkout
       
       - run:
-          name: List Folder
-          command: ls
+          name: Display Requirements
+          command: |
+            cat ./requirements.txt
       
       # Download and cache dependencies
       - restore_cache:
