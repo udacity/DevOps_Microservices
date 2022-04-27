@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-# https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
+# Reference: https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
 dockerpath=richbm10/my-private-repo
 
 # Step 2:  

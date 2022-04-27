@@ -12,4 +12,4 @@ docker image ls
 
 # Step 3: 
 # Run flask app
-docker run -it --publish 3000:80 ml-microservice
+docker run -it --publish 3000:80 richbm10/my-private-repo:ml-microservice

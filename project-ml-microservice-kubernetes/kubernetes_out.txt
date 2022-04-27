@@ -1,0 +1,4 @@
+NAME                               READY   STATUS    RESTARTS   AGE
+ml-microservice-7c57bbd5ff-zvmpq   1/1     Running   0          40m
+Forwarding from 0.0.0.0:3000 -> 80
+Handling connection for 3000
