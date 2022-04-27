@@ -16,6 +16,10 @@ jobs:
     steps:
       - checkout
       
+      - run:
+          name: List Folder
+          command: ls
+      
       # Download and cache dependencies
       - restore_cache:
           keys:
