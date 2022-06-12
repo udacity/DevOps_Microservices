@@ -1,1 +1,8 @@
 <paste log output from Kubernetes-mediated prediction, here>
+
+NAME                                READY   STATUS    RESTARTS      AGE
+project4-docker-udacity             1/1     Running   0             3m16s
+python-helloworld-794b9f56c-h8852   1/1     Running   2 (26m ago)   2d12h
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
