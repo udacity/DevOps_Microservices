@@ -1,5 +1,5 @@
-pandas
-sensible
+# pandas
+# sensible
 click
 pytest
 pylint
@@ -11,7 +11,7 @@ requests
 flasgger
 pytest-flask
 pytest-cov
-jupyter
-matplotlib
-seaborn
-numpy
+# jupyter
+# matplotlib
+# seaborn
+# numpy
