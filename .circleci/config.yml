@@ -9,7 +9,7 @@ jobs:
     # Use the same Docker base as the project
     - image: python:3.7.3-stretch
 
-  working_directory: ~/https://github.com/AYO32/DevOps_Microservices.git
+  working_directory: ~/.circleci/config.yml
 
   steps:
   - checkout
