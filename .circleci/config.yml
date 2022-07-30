@@ -9,7 +9,7 @@ jobs:
     # Use the same Docker base as the project
     - image: python:3.7.3-stretch
 
-  working_directory: ~/.circleci/config.yml
+    working_directory: ~/.circleci/config.yml
 
   steps:
   - checkout
