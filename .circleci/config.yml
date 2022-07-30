@@ -7,38 +7,37 @@ jobs:
   build:
     docker:
     # Use the same Docker base as the project
-    - image: python:3.7.3-stretch
+      - image: python:3.7.3-stretch
 
     working_directory: ~/repo
 
-  steps:
-    - checkout
+    steps:
+      - checkout
 
-  # Download and cache dependencies
-  - restore_cache:
-      keys:
-        - v1-dependencies-{{ checksum "requirements.txt" }}
-        # fallback to using the latest cache if no exact match is found
-        - v1-dependencies-
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-  - run:
-      name: install dependencies
-      command: |
-        python3 -m venv .devops
-        . ~/.devops/bin/activate
-        make install
-        # Install hadolint
-        wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-              chmod +x /bin/hadolint
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . ~/.devops/bin/activate
+            make install
+            # Install hadolint
+            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+                chmod +x /bin/hadolint
+      - save_cache:
+          paths:
+            - ./~/.devops
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-  - save_cache:
-      paths:
-        - ./~/.devops
-      key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-  # run lint!
-  - run:
-      name: run lint
-      command: |
-        . ~/.devops/bin/activate
-        make lint 
+      # run lint!
+      - run:
+          name: run lint
+          command: |
+            . ~/.devops/bin/activate
+            make lint           
