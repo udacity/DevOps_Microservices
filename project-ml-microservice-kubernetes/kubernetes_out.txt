@@ -1,0 +1,5 @@
+NAME             READY   STATUS    RESTARTS   AGE
+udacityproject   1/1     Running   0          3m27s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
