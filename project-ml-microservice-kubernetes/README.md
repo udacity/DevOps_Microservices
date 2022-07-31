@@ -1,5 +1,11 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/AYO32/DevOps_Microservices/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/AYO32/DevOps_Microservices/tree/master)
 
+## Project summary:
+The goal of this project is to operationalize a working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications.
+
+## Instructions on on how to run the Python scripts and web app:
+
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
