@@ -1,9 +1,16 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/AYO32/DevOps_Microservices/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/AYO32/DevOps_Microservices/tree/master)
 
 ## Project summary:
-The goal of this project is to operationalize a working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications.
+This project is all about operationalizing a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls.
+The goal of this project is to operationalize a working machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications.
 
 ## Instructions on on how to run the Python scripts and web app:
+1. Standalone:  `python app.py`
+2. Run in Docker:  `./run_docker.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+## A short explanation of the files in the repository:
+
 
 
 ## Project Overview
