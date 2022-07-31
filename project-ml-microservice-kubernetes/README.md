@@ -10,7 +10,14 @@ The goal of this project is to operationalize a working machine learning microse
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ## A short explanation of the files in the repository:
-
+1. docker_out.txt: This is where the log statement output that print out prediction values was saved from the dockerfile.
+2. kubernetes_out.txt: This is where the log statement output that print out prediction values was saved using kubernetes.
+3. upload_docker.sh: This is a shell script to tag and upload an image to Docker Hub.
+4. run_kubernetes.sh: This is a shell script that deploys a container using kubectl
+5. make_prediction.sh: This is a script that makes predictions and generate values.
+6. makefile: Makefile includes instructions on environment setup and lint tests.
+7. app.py: This a python flasked app that serves out predictions.
+8. Dockerfile: A file to build and run the docker image.
 
 
 ## Project Overview
