@@ -9,7 +9,7 @@ jobs:
     # Use the same Docker base as the project
       - image: python:3.7.3-stretch
 
-    working_directory: ~/https://github.com/AYO32/DevOps_Microservices/project-ml-microservice-kubernetes
+    working_directory: ~/repo
 
     steps:
       - checkout
@@ -17,27 +17,29 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
-            python3 -m venv ~/.devops
-            . ~/.devops/bin/activate
+            cd project-ml-microservice-kubernetes
+            python3 -m venv venv
+            . venv/bin/activate
             make install
             # Install hadolint
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-                chmod +x /bin/hadolint
+            chmod +x /bin/hadolint
       - save_cache:
           paths:
-            - ./~/.devops
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+            - ./venv 
+          key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
       # run lint!
       - run:
           name: run lint
           command: |
-            . ~/.devops/bin/activate
+            cd project-ml-microservice-kubernetes
+            . venv/bin/activate
             make lint           
