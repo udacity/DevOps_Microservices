@@ -14,7 +14,7 @@ jobs:
       - run:
           name: check location
           command: |
-            cd ~/repo/project-ml-microservice-kubernete
+            cd ~/repo/project-ml-microservice-kubernetes
             ls -l
             pwd
       - restore_cache:
