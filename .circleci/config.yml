@@ -14,9 +14,10 @@ jobs:
       - run:
           name: check location
           command: |
-            cd ~/repo/project-ml-microservice-kubernetes
+            cd ~/root/repo/project-ml-microservice-kubernetes
             ls -l
             pwd
+            cd 
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
