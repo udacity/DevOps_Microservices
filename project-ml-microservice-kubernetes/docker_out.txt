@@ -1,0 +1,59 @@
+
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % ./run_docker.sh
+[+] Building 38.0s (9/9) FINISHED                                                                                                                         
+ => [internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 37B                                                                                                                  0.0s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/python:3.7.3-stretch                                                                              1.5s
+ => [internal] load build context                                                                                                                    0.0s
+ => => transferring context: 3.26kB                                                                                                                  0.0s
+ => [1/4] FROM docker.io/library/python:3.7.3-stretch@sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779                        0.0s
+ => CACHED [2/4] WORKDIR /app                                                                                                                        0.0s
+ => [3/4] COPY . /app                                                                                                                                0.0s
+ => [4/4] RUN pip install -r requirements.txt                                                                                                       33.0s
+ => exporting to image                                                                                                                               3.2s 
+ => => exporting layers                                                                                                                              3.2s 
+ => => writing image sha256:8db055652e90dc4da71d4232026647c508ab710b76ae7a6938533a95b38104eb                                                         0.0s 
+ => => naming to docker.io/library/project-4                                                                                                         0.0s 
+                                                                                                                                                          
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them                                                      
+REPOSITORY                                             TAG       IMAGE ID       CREATED          SIZE
+project-4                                              latest    8db055652e90   4 seconds ago    1.25GB
+<none>                                                 <none>    a43eda9337b4   19 minutes ago   1.25GB
+<none>                                                 <none>    7d22cf77411a   23 minutes ago   1.25GB
+<none>                                                 <none>    8a7abdd45bd4   38 minutes ago   1.25GB
+<none>                                                 <none>    c89a339160f8   40 minutes ago   1.25GB
+<none>                                                 <none>    e4635071247e   41 minutes ago   1.25GB
+<none>                                                 <none>    be12e3d09c42   50 minutes ago   1.25GB
+534738582010.dkr.ecr.us-east-1.amazonaws.com/udacity   latest    952af6312f74   24 hours ago     924MB
+python-helloworld                                      latest    952af6312f74   24 hours ago     924MB
+udacity                                                latest    952af6312f74   24 hours ago     924MB
+534738582010.dkr.ecr.us-east-1.amazonaws.com/udacity   <none>    3c58e255f408   6 days ago       903MB
+amazon/aws-cli                                         latest    342b024a6b7a   2 weeks ago      355MB
+postgres                                               latest    a26eb6069868   3 weeks ago      379MB
+alpine                                                 latest    49176f190c7e   7 weeks ago      7.05MB
+gcr.io/k8s-minikube/kicbase                            v0.0.36   866c1fe4e3f2   2 months ago     1.11GB
+postgres                                               alpine    cc994726847f   3 months ago     218MB
+mongo                                                  latest    27dd1be4bed1   8 months ago     700MB
+mongo-express                                          latest    2d2fb2cabc8f   14 months ago    136MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 194-414-639
+[2023-01-13 11:25:15,576] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2023-01-13 11:25:15,595] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-01-13 11:25:15,607] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-01-13 11:25:15,611] INFO in app: Prediction value is [20.35373177134412]
+172.17.0.1 - - [13/Jan/2023 11:25:15] "POST /predict HTTP/1.1" 200 -
+

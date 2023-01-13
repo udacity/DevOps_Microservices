@@ -1,0 +1,24 @@
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % ./run_kubernetes.sh 
+deployment.apps/project created
+NAME                      READY   STATUS              RESTARTS   AGE
+project-6b67fbf87-996t9   0/1     ContainerCreating   0          1s
+Error from server (NotFound): pods "project" not found
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % ./run_kubernetes.sh
+error: failed to create deployment: deployments.apps "project" already exists
+NAME                      READY   STATUS              RESTARTS   AGE
+project-6b67fbf87-996t9   0/1     ContainerCreating   0          16s
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % ./run_kubernetes.sh
+error: failed to create deployment: deployments.apps "project" already exists
+NAME                      READY   STATUS              RESTARTS   AGE
+project-6b67fbf87-996t9   0/1     ContainerCreating   0          34s
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % kubectl get pod
+NAME                      READY   STATUS    RESTARTS   AGE
+project-6b67fbf87-996t9   1/1     Running   0          104s
+(.devops) nirjharijankar@Nirjharis-MBP project-ml-microservice-kubernetes % ./run_kubernetes.sh
+error: failed to create deployment: deployments.apps "project" already exists
+NAME                      READY   STATUS    RESTARTS   AGE
+project-6b67fbf87-996t9   1/1     Running   0          106s
+Forwarding from 0.0.0.0:80 -> 80
+Handling connection for 80
+
