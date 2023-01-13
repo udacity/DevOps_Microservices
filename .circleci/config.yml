@@ -46,4 +46,6 @@ jobs:
             pwd
             ls -l
             project-ml-microservice-kubernetes/.venv/bin/activate
+            cd project-ml-microservice-kubernetes
+            ls -l
             make lint 
