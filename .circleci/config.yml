@@ -14,7 +14,8 @@ jobs:
       - run:
           name: check location
           command: |
-            cd repo/project-ml-microservice-kubernetes
+            ls -l
+            cd project-ml-microservice-kubernetes
             ls -l
             pwd
             cd 
