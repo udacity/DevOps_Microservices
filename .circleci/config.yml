@@ -16,6 +16,7 @@ jobs:
       - run:
           name: check location
           command: |
+            cd project-ml-microservice-kubernetes
             ls -l
             pwd
       - restore_cache:
