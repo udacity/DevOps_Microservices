@@ -35,10 +35,10 @@ jobs:
             # Install hadolint
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
             chmod +x /bin/hadolint
-            - save_cache:
-                paths:
-                - ./venv
-                  key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
       - run:
           name: run lint
