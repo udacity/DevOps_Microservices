@@ -13,6 +13,11 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: check location
+          command: |
+            ls -l
+            pwd
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
