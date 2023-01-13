@@ -47,6 +47,7 @@ jobs:
             ls -l
             cd project-ml-microservice-kubernetes
             ls -l
+            chmod +x venv/bin/activate
             venv/bin/activate
             
             make lint 
