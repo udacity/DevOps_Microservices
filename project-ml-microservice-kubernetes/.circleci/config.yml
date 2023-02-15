@@ -28,3 +28,4 @@ jobs:
           command: |
             . venv/bin/activate
             make lint
+            # yes
