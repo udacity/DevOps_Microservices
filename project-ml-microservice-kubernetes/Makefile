@@ -11,6 +11,9 @@ setup:
 	python3 -m venv ~/.devops
 
 install:
+	# Some necessary files for Scipy to work for Ubuntu 
+	# sudo apt install libblas3 liblapack3 liblapack-dev libblas-dev -y
+	# sudo apt install gfortran -y
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
@@ -22,6 +25,8 @@ test:
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
+	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64
+	chmod +x /bin/hadolint
 	# This is linter for Dockerfiles
 	hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
