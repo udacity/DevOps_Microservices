@@ -23,6 +23,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            ls
             cd $(eval echo "$CIRCLE_WORKING_DIRECTORY/DevOps_Microservices/project-ml-microservice-kubernetes")
             python3 -m venv venv
             . venv/bin/activate
