@@ -1,15 +1,27 @@
-#!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
+#!/bin/bash
 
-# Assumes that an image is built via `run_docker.sh`
+image_name=udacity-pj4
+image_tag=v1.0.0
 
-# Step 1:
-# Create dockerpath
-# dockerpath=<your docker ID/path>
+# Create docker_path
+docker_path=lx96
 
-# Step 2:  
-# Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+# Add variable DOCKER_PASSWORD
+source .env
 
-# Step 3:
+# Log in to Docker
+echo docker login --username "$docker_path" --password-stdin $DOCKER_PASSWORD
+
+# Check if login was successful
+if [ $? -eq 0 ]; then
+    echo "Docker authentication successful!"
+else
+    echo "Docker authentication failed!"
+fi
+
+echo "Docker ID and Image: $docker_path"
+
+docker image tag "$image_name:$image_tag" "$docker_path/$image_name:$image_tag"
+
 # Push image to a docker repository
+docker push "$docker_path/$image_name:$image_tag"

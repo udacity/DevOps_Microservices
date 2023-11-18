@@ -1,1 +1,29 @@
 <paste log output from Kubernetes-mediated prediction, here>
+### K8s:
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ kubectl get pods --all-namespaces                                                                   
+NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
+kube-system   coredns-5dd5756b68-rt42b           1/1     Running   0             21m
+kube-system   etcd-minikube                      1/1     Running   0             21m
+kube-system   kube-apiserver-minikube            1/1     Running   0             21m
+kube-system   kube-controller-manager-minikube   1/1     Running   0             21m
+kube-system   kube-proxy-qgfbj                   1/1     Running   0             21m
+kube-system   kube-scheduler-minikube            1/1     Running   0             21m
+kube-system   storage-provisioner                1/1     Running   1 (20m ago)   21m
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh                                                                                 
+lx96/udacity-pj4:v1.0.0
+deployment.apps/udacity-pj4 created
+NAME                           READY   STATUS              RESTARTS   AGE
+udacity-pj4-7759b46ccd-hv79b   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ kubectl port-forward deployment.apps/udacity-pj4 --address 0.0.0.0 8000:80
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+
+### Call API
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
