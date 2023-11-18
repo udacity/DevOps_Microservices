@@ -46,4 +46,6 @@ jobs:
           command: |
             cd $(eval echo "$CIRCLE_WORKING_DIRECTORY/project-ml-microservice-kubernetes")
             . venv/bin/activate
+            sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+            sudo chmod +x /bin/hadolint
             make lint
