@@ -1,4 +1,5 @@
-<include a CircleCI status badge, here>
+
+[![lx0612](https://circleci.com/gh/lx0612/DevOps_Microservices.svg?style=svg)](https://app.circleci.com/pipelines/github/lx0612/DevOps_Microservices)
 
 ## Project Overview
 
@@ -44,7 +45,24 @@ source .devops/bin/activate
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+1. **Setup and Configure Docker**
+   - Go to the Docker Desktop website at https://www.docker.com/products/docker-desktop/ and follow the instructions to install Docker Desktop.
+   - Verify : `docker --version`.
+
+2. **Setup and Configure Kubernetes**
+   - For Windows users, the recommended way is to use Docker Desktop. Open Docker Desktop, go to Settings, navigate to Kubernetes, and check "Enable Kubernetes."
+   - Verify the Kubernetes configuration by running: `kubectl version --output json`.
+
+3. **Create Flask App in a Container**
+   - Build the Docker image for the Flask app using the following command: `docker build --tag udacity-pj4:v1.0.0 .`
+   - Run the container with the created image: `docker run -d --rm -p 8000:80 udacity-pj4:v1.0.0`
+
+4. **Deploy Flask App via Kubernetes**
+   - Create an environment file `.env` and set variable `DOCKER_PASSWORD=<your-docker-hub-pw>`.
+   - run: `source .env`.
+   - Export your Docker Hub ID using: `export docker_path=<your-docker-hub-id>`.
+   - Log in to Docker Hub to push the image: `echo "$DOCKER_PASSWORD" | docker login --username $docker_path --password-stdin`.
+   - Tag and push the Docker image to Docker Hub: `docker image tag udacity-pj4:v1.0.0 $docker_path/udacity-pj4:v1.0.0 && docker image push $docker_path/udacity-pj4:v1.0.0`.
+   - Create a Kubernetes deployment: `kubectl create deploy udacity-pj4 --image="$docker_path/udacity-pj4:v1.0.0"`.
+   - Check whether the pod is in the READY state: `kubectl get pods`.
+   - Wait pods ready, forward the port to access the Flask app locally: `kubectl port-forward deployment.apps/udacity-pj4 8000:80`.
