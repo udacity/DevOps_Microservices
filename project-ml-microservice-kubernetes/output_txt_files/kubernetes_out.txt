@@ -1,1 +1,33 @@
 <paste log output from Kubernetes-mediated prediction, here>
+pod/api-microservices created
+NAMESPACE     NAME                                                READY   STATUS    RESTARTS   AGE
+default       api-microservices                                   1/1     Running   0          12s
+kube-system   coredns-66bff467f8-cbzpm                            1/1     Running   0          19h
+kube-system   coredns-66bff467f8-nppkt                            1/1     Running   0          19h
+kube-system   etcd-khaled-virtual-machine                         1/1     Running   0          12m
+kube-system   kube-apiserver-khaled-virtual-machine               1/1     Running   0          19h
+kube-system   kube-controller-manager-khaled-virtual-machine      1/1     Running   1          19h
+kube-system   kube-proxy-c7lr2                                    1/1     Running   0          19h
+kube-system   kube-scheduler-khaled-virtual-machine               1/1     Running   1          19h
+kube-system   storage-provisioner                                 1/1     Running   1          19h
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 161-774-587
+[2023-11-19 19:38:23,813] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2023-11-19 19:38:23,864] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-11-19 19:38:23,872] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+172.17.0.1 - - [19/Nov/2023 19:38:23] "POST /predict HTTP/1.1" 200 -
