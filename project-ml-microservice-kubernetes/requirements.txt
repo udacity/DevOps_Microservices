@@ -1,4 +1,4 @@
-lick
+Click
 Flask
 itsdangerous
 Jinja2
@@ -9,6 +9,6 @@ python-dateutil
 pytz
 scikit-learn
 scipy
-six=
+six
 Werkzeug
 pylint
